@@ -16,8 +16,8 @@ class CreateExpiriencesTable extends Migration
         Schema::create('expiriences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('profile_id');
-            $table->string('ruolo', 50);
-            $table->string('azienda', 80);
+            $table->string('ruolo');
+            $table->string('azienda');
             $table->longText('descrizione');
             $table->date('start');
             $table->date('end');

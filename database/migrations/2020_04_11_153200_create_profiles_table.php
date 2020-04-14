@@ -15,18 +15,18 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 32);
-            $table->string('cognome', 32);
+            $table->string('nome');
+            $table->string('cognome');
             $table->longText('descrizione');
             $table->string('img');
-            $table->string('email', 32);
-            $table->string('indirizzo', 50);
-            $table->string('tel', 20);
-            $table->string('professione', 32);
-            $table->string('git', 32)->default('http://');
-            $table->string('skype', 32)->default('http://');
-            $table->string('facebook', 32)->default('http://');
-            $table->string('instagram', 32)->default('http://');
+            $table->string('email');
+            $table->string('indirizzo');
+            $table->string('tel');
+            $table->string('professione');
+            $table->string('git')->default('http://');
+            $table->string('skype')->default('http://');
+            $table->string('facebook')->default('http://');
+            $table->string('instagram')->default('http://');
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class CreateMansionsTable extends Migration
         Schema::create('mansions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('exp_id');
-            $table->string('mansione', 50);
+            $table->string('mansione');
             $table->mediumText('sh_desc');
             $table->timestamps();
 

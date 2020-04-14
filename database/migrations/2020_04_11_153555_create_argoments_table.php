@@ -16,7 +16,7 @@ class CreateArgomentsTable extends Migration
         Schema::create('argoments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('edu_id');
-            $table->string('tag', 32);
+            $table->string('tag');
             $table->mediumText('sh_descr');
             $table->timestamps();
 

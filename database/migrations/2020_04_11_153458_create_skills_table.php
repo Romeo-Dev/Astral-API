@@ -17,8 +17,8 @@ class CreateSkillsTable extends Migration
             $table->id();
             $table->foreignId('profile_id');
             $table->foreignId('ability_id');
-            $table->string('title', 50);
-            $table->string('progress', 80)->nullable();
+            $table->string('title');
+            $table->string('progress')->nullable();
             $table->timestamps();
 
             /**

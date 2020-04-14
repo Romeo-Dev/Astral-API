@@ -16,10 +16,10 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('profile_id');
-            $table->string('name', 32);
-            $table->string('last_name', 32);
-            $table->string('email', 32);
-            $table->string('subject', 80);
+            $table->string('name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('subject');
             $table->longText('content');
             $table->timestamps();
 

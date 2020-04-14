@@ -16,9 +16,9 @@ class CreateEducationsTable extends Migration
         Schema::create('educations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('profile_id');
-            $table->string('qualifica', 50);
+            $table->string('qualifica');
             $table->longText('descrizione');
-            $table->string('luogo', 80);
+            $table->string('luogo');
             $table->date('graduation');
             $table->timestamps();
 

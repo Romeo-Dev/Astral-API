@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->foreignId('profile_id');
             $table->foreignId('tec_id');
-            $table->string('nome', 50);
+            $table->string('nome');
             $table->longText('descrizione');
             $table->timestamps();
 
