@@ -15,9 +15,15 @@ class CreateAbilitiesTable extends Migration
     {
         Schema::create('abilities', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('profile_id');
             $table->string('name');
             $table->string('icon')->nullable();
             $table->timestamps();
+
+            /**
+             * Vincoli di chiave
+             */
+            $table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
         });
     }
 

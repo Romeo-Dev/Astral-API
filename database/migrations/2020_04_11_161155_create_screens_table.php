@@ -22,7 +22,7 @@ class CreateScreensTable extends Migration
             /**
              * Vincoli di chiave
              */
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
         });
     }
 

@@ -28,7 +28,7 @@ class Profile extends Model
         return $this->hasMany('App\Models\Education');
     }
 
-    public function skills(){
-        return $this->hasMany('App\Models\Skill');
+    public function abilities(){
+        return $this->hasMany('App\Models\Ability');
     }
 }

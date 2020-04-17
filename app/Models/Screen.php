@@ -3,8 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Screen extends Model
 {
-    //
+    public function project(){
+        return $this->belongsTo('App\Models\Project');
+    }
 }

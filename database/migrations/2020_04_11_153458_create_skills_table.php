@@ -15,7 +15,6 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('profile_id');
             $table->foreignId('ability_id');
             $table->string('title');
             $table->string('progress')->nullable();
@@ -24,8 +23,7 @@ class CreateSkillsTable extends Migration
             /**
              * Vincoli di chiave
              */
-            $table->foreign('profile_id')->references('id')->on('profiles');
-            $table->foreign('ability_id')->references('id')->on('abilities');
+            $table->foreign('ability_id')->references('id')->on('abilities')->onDelete('cascade');
         });
     }
 

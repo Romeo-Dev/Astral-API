@@ -23,7 +23,7 @@ class CreateArgomentsTable extends Migration
             /**
              * Vincoli di chiave
              */
-            $table->foreign('edu_id')->references('id')->on('educations');
+            $table->foreign('edu_id')->references('id')->on('educations')->onDelete('cascade');
         });
     }
 

@@ -23,7 +23,7 @@ class CreateMansionsTable extends Migration
             /**
              * Vincoli di chiave
              */
-            $table->foreign('exp_id')->references('id')->on('expiriences');
+            $table->foreign('exp_id')->references('id')->on('expiriences')->onDelete('cascade');
         });
     }
 

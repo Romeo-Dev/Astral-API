@@ -16,6 +16,10 @@ class Project extends Model
     }
 
     public function tecnology(){
-        return $this->belongsTo('App\Models\Tecnology');
+        return $this->belongsTo('App\Models\Tecnology','tec_id');
+    }
+
+    public function screens(){
+        return $this->hasMany('App\Models\Screen');
     }
 }
