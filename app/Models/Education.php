@@ -18,6 +18,6 @@ class Education extends Model
     }
 
     public function argoments(){
-        return $this->hasMany('App\Models\Argoment');
+        return $this->hasMany('App\Models\Argoment','edu_id');
     }
 }

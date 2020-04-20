@@ -17,6 +17,6 @@ class Expirience extends Model
     }
 
     public function mansions(){
-        return $this->hasMany('App\Models/Mansion');
+        return $this->hasMany('App\Models\Mansion','exp_id');
     }
 }

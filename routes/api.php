@@ -27,6 +27,8 @@ Route::get('/profiles/{id}/projects', 'ProfileController@showProjects')->name('p
 Route::get('/profiles/{id}/tecnologies', 'ProfileController@showTecnologiesByProjects')->name('profile.tecnologies');
 Route::get('/profiles/{id}/tecnologies/{tid}/projects', 'ProfileController@projectList')->name('profile.tecnologies.projects');
 Route::get('/profile/{id}/abilities', 'ProfileController@getAbility')->name('profile.abilities');
+Route::get('/profile/{id}/educations', 'ProfileController@getEdus')->name('profile.educations');
+Route::get('/profile/{id}/experiences', 'ProfileController@getExp')->name('profile.experiences');
 
 /**
  * Rotte tecnologies successivamente raggruppate
@@ -42,8 +44,14 @@ Route::get('/projects', 'ProjectController@getAllProjects')->name('project.all')
 Route::get('/projects/{id}', 'ProjectController@detailProject')->name('project.detail');
 
 /**
- * Rotte abilities successivamente raggruppate
+ * Rotte abilities successivamente raggruppate Ability Controller gestisce anche le crud di Skills
  */
 Route::get('/abilities/', 'AbilityController@getAbilities')->name('abilities.all');
 Route::get('/abilities/more', 'AbilityController@moreDetails')->name('abilities.all.more');
 Route::get('/abilities/{id}', 'AbilityController@detailsAbility')->name('abilities.details');
+
+/**
+ * Rotte Educations + Argoments successivamente raggruppate
+ */
+Route::get('/educations', 'EduController@getAllEdus')->name('educations.all');
+Route::get('/educations/{id}', 'EduController@detailsEdu')->name('educations.details');

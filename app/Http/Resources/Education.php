@@ -4,10 +4,9 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Profile as ProfileResource;
-use App\Http\Resources\Tecnology as TecnologyResource;
-use App\Http\Resources\Screen as ScreenResource;
+use App\Http\Resources\Argoment as ArgomentResource;
 
-class Project extends JsonResource
+class Education extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,11 +18,12 @@ class Project extends JsonResource
     {
         return [
             'id' => $this->id,
-            'nome' => $this->nome,
+            'qualifica' => $this->qualifica,
             'descrizione' => $this->descrizione,
+            'luogo' => $this->luogo,
+            'graduation' => $this->graduation,
+            'args' => ArgomentResource::collection($this->whenLoaded('argoments')),
             'profile' =>  new ProfileResource($this->whenLoaded('profile')),
-            'tecnology' => new TecnologyResource($this->tecnology),
-            'screens' => ScreenResource::collection($this->whenLoaded('screens'))
         ];
     }
 }

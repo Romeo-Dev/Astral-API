@@ -51,4 +51,12 @@ class ProfileController extends Controller
     public function getAbility($id){
         return new ProfileResource(Profile::find($id)->load('abilities.skills'));
     }
+
+    public function getEdus($id){
+        return new ProfileResource(Profile::find($id)->load('educations.argoments'));
+    }
+
+    public function getExp($id){
+        return new ProfileResource(Profile::find($id)->load('experiences.mansions'));
+    }
 }

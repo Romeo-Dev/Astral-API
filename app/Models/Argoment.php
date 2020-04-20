@@ -12,6 +12,6 @@ class Argoment extends Model
      * Eloquent relationships
      */
     public function education(){
-        return $this->belongsTo('App\Models\Education');
+        return $this->belongsTo('App\Models\Education','edu_id');
     }
 }

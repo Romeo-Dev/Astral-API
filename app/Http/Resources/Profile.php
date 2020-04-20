@@ -5,6 +5,8 @@ namespace App\Http\Resources;
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Project as ProjectResource;
 use App\Http\Resources\Ability as AbilityResource;
+use App\Http\Resources\Education as EducationResource;
+use App\Http\Resources\Expirience as ExpResource;
 
 class Profile extends JsonResource
 {
@@ -28,6 +30,8 @@ class Profile extends JsonResource
             'professione' => $this->professione,
             'projects' => ProjectResource::collection($this->whenLoaded('projects')),
             'abilities' => AbilityResource::collection($this->whenLoaded('abilities')),
+            'edu' => EducationResource::collection($this->whenLoaded('educations')),
+            'exp' => ExpResource::collection($this->whenLoaded('experiences')),
             'git' => $this->git,
             'skype' => $this->skype,
             'facebook' => $this->facebook,
